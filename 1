@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<string.h>
+/*Mengisi Biodata*/
+int main(){
+    garis();
+    printf("                         MY BIODATA\n");
+    garis();
+    biodata();
+    garis();
+}
+void biodata();
+void biodata(){
+    char nama[100]="Muhammad Khoerul Anam";
+    printf("Nama \t\t\t= %s\n",nama);
+    char addres[100]="Jalan Raya Kawunganten,RT01/01,Cilacap, Jawa Tengah";
+    printf("Alamat \t\t\t= %s\n",addres);
+    char hobbies[2][100]={"Desain","Membaca"};
+    int i;
+    int nikah=0;
+    for(i=0;i<2;i++)
+    printf("Hobbi %d Saya adalah \t= %s\n",i+1,hobbies[i]);
+    if(nikah==0){
+        printf("Status \t\t\t= Belum Menikah\n");
+    }else if(nikah==1)
+    printf("Menikah");
+    char skills[2][100]={"Desainer","Editor Video"};
+    for(i=0;i<2;i++)
+    printf("Skills %d Saya adalah \t= %s\n",i+1,skills[i]);
+
+}
+void garis();
+void garis(){
+printf("-----------------------------------------------------------\n");
+}
+
