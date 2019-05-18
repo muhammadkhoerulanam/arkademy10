@@ -1,0 +1,20 @@
+<?php
+$jumlah = 5;
+function generateString($jumlah)
+    {
+        $karakter = 'abcdefghijklmnopqrstuvwxyz1234567890';
+
+        $string='';
+
+        for ($a = 1; $a <= $jumlah; $a++) { 
+        	for($i = 0; $i < 32; $i++)
+	        {
+	            $tampil = rand(0,strlen($karakter)-1);
+	            $string .= $karakter{$tampil};
+	        }
+        }
+        return $string;
+    }
+    $data = generateString($jumlah);
+    echo $data;
+?>
