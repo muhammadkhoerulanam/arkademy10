@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input id="myInput" value="Input Proggramer">
+<button id="myBtn" onclick="input">Button</button>
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+<table style="width:100%">
+
+  <tr>
+    <td>User 1</td><td>React,Php,Python</td>
+    <td><input id="myInput" value="Input Skill Proggramer"><button id="myBtn" onclick="input">Button</button></td> 
+  </tr>
+  <tr>
+    <td>User 2</td><td>WP,CSS</td>
+    <td><input id="myInput" value="Input Skill Proggramer"><button id="myBtn" onclick="input">Button</button></td> 
+  </tr>
+  <tr>
+    <td>User 3</td><td>Nama ke-n</td>
+    <td><input id="myInput" value="Input Skill Proggramer"><button id="myBtn" onclick="input">Button</button></td> 
+</table>
+</body>
+</html>
