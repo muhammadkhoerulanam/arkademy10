@@ -1,0 +1,67 @@
+#include<stdio.h>
+char datalain[5]={'a','b','c','d'};
+char data[6]={'h','g','a','b','d','f'};
+int main(){
+ mindata(datalain);
+ printf("\n");
+ minimax(data);
+  getch();
+ return 1;
+}
+void mindata(){
+    int q;
+for (q=0;q<5;q++){
+    printf("%c",datalain[q]);
+}
+ int i,j,k,l;
+ int count=0;
+
+ int A=strlen(datalain);
+ char huruf;
+
+ for(i=1;i<A;i++){
+  k=datalain[i];
+  j=i;
+  while(datalain[j-1]> k && j>0){
+   datalain[j]=datalain[j-1];
+   j=j-1;
+  }
+  datalain[j]=k;
+ }
+ for(i=0;i<1;i++){
+  if((datalain[1]!='a')||(datalain[4]=='d')){
+    datalain[0]='a';
+    datalain[4]='d';
+     printf("\n%c,%c",datalain[0],datalain[4]);
+   count++;
+  }
+ }
+}
+void minimax(){
+    int q;
+for (q=0;q<6;q++){
+    printf("%c",data[q]);
+}
+ int i,j,k,l;
+ int count=0;
+
+ int A=strlen(data);
+
+ for(i=1;i<A;i++){
+  k=data[i];
+  j=i;
+  while(data[j-1]> k && j>0){
+   data[j]=data[j-1];
+   j=j-1;
+  }
+  data[j]=k;
+ }
+ for(i=0;i<1;i++){
+  if((data[0]!='a')||(data[5]!='f')){
+    data[0]='a';
+    data[5]='f';
+     printf("\n%c,%c",data[0],data[5]);
+   count++;
+  }
+ }
+}
